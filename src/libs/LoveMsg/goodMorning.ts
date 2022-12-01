@@ -65,6 +65,7 @@ const weatherInfo = async () => {
       await wxNotify(args)
 
       // 手动开启、或者超出字节自动开启
+      debugger
       if (CONFIG.tips_card_show || isMoreThan) {
         const tips = textCardImportantTips({ ...weather, lunarInfo, oneWord })
         console.log('tips', tips)
@@ -79,5 +80,5 @@ const weatherInfo = async () => {
 // goodMorning
 export const goodMorning = async () => {
   await weatherInfo()
-  await goodWord()
+  // await goodWord()
 }
